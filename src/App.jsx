@@ -3,9 +3,10 @@ import Login from './views/Login';
 import Signup from './views/Signup';
 import Users from './views/Users';
 import Layout from './components/Layout';
-import Guestlayout from './components/Guestlayout';
+import Guestlayout from './components/GuestLayout';
 import Dashboard from './views/Dashboard';
 import UserForm from './views/UserForm';
+import GuestLayout from './components/GuestLayout';
 
 const App = () => {
   const router = createBrowserRouter(createRoutesFromElements(
@@ -18,7 +19,7 @@ const App = () => {
           <Route path='/users/:id' element={<UserForm />}/>
       </Route>
 
-      <Route path='/' element={<Guestlayout />} >
+      <Route path='/' element={<GuestLayout />} >
         <Route path='login' element={<Login />}/>
         <Route path='signup' element={<Signup />} />
       </Route>
